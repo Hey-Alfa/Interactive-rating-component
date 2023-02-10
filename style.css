@@ -1,0 +1,136 @@
+:root {
+	--white: hsl(0, 0%, 100%);
+	--orange: hsl(25, 97%, 53%);
+	--ligth-grey: hsl(217, 12%, 63%);
+	--medium-grey: hsl(216, 12%, 54%);
+	--dark-blue: hsl(213, 19%, 18%);
+	--very-dark-blue: hsl(216, 23%, 13%);
+	--text: 15px;
+
+}
+
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+span, p{
+	font-size: var(--text);
+	color: var(--ligth-grey);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: hsl(216, 12%, 8%);
+	font-family: 'Overpass', sans-serif;
+}
+.container {
+	height: 100dvh;
+
+}
+.box {
+	max-width: 360px;
+	height: 360px;
+	background: var(--very-dark-blue);
+	padding: 2rem;
+	border-radius: 20px;	
+}
+/* Rating state start */
+.star-rate {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-bottom: 1.5rem;
+	background: var(--dark-blue);
+	border-radius: 50%;
+}
+h3 {
+	color: var(--white);
+	margin-top: 2rem;
+	font-weight: 700;
+}
+h3 + p, button{
+	color: var(--ligth-grey);
+	margin-top: 1rem;
+	font-size: 15px;
+}
+.rating-numbers {
+	margin-top: 1rem;
+	width: 100%;
+	display: flex;
+	text-align: center;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+#star1:hover, 
+#star2:hover,
+#star3:hover,
+#star4:hover,
+#star5:hover{
+	background: var(--orange);
+}
+#star1:hover + span, 
+#star2:hover + span,
+#star3:hover + span,
+#star4:hover + span{
+	background: var(--medium-grey);
+	transition: .7s;
+}
+.color{
+	background: var(--orange) !important;
+}
+.rating-numbers span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.5rem;
+	max-height: 2.5rem;
+	background: var(--dark-blue);
+	border-radius: 50%;
+	padding: 15px;
+	margin-top: 1rem;
+}
+/*span a {
+	padding: 10px;
+	text-decoration: none;
+}*/
+button {
+	margin-top: 1.5rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	width: 100%;
+	border: transparent;
+	border-radius: 50px;
+	background: var(--orange);
+}
+button:hover {
+	background: var(--white);
+	color: var(--orange);
+}
+/* Rating state End */
+.submited div {
+	margin-bottom: 2rem;
+}
+div + p {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+	color: var(--orange);
+	padding: 5px;
+	border-radius: 50px;
+	background: var(--dark-blue);
+}
+h1, h1 + p{
+	text-align: center;
+	color: var(--white);
+	margin-top: 1rem;
+}
+.display{
+	display: none;
+}
+p span {
+	color: var(--orange);
+}
